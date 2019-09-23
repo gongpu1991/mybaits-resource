@@ -3,6 +3,7 @@ package gongpu;
 import gongpu.Mapper.UserMapper;
 import gongpu.dao.User;
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -20,7 +21,12 @@ public class MybatisTest {
      */
     SqlSession sqlSession = sqlSessionFactory.openSession();
     UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-    User user = userMapper.selectById("gongpu",1L);
+    User user = userMapper.selectById("gongpu",4L);
     System.out.println(user);
+   // sqlSession.close();
+   // SqlSession sqlSession = sqlSessionFactory.openSession();
+    UserMapper userMapper1 = sqlSession.getMapper(UserMapper.class);
+    User user1 = userMapper1.selectById("gongpu",4L);
+    System.out.println(user1);
   }
 }

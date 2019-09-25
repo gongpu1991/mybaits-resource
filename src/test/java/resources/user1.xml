@@ -2,17 +2,17 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="gongpu.Mapper.UserMapper1">
-  <select id="selectById" parameterType="map" resultType="gongpu.dao.User">
+<mapper namespace="example.Mapper.UserMapper1">
+  <select id="selectById" parameterType="map" resultType="example.dao.User">
     select * from user1 where name = #{name} and id=#{id}
   </select>
 
-  <select id="selectAll" parameterType="map"  resultType="gongpu.dao.User">
+  <select id="selectAll" parameterType="map"  resultType="example.dao.User">
     select * from user1 where id = ${id} and name=#{name}
   </select>
 
-  <select id="selectByIdAndName" parameterType="map" resultType="gongpu.dao.User">
-    select * from user1 where id = ${id} and name=${name}
+  <select id="selectByIdAndName" parameterType="string" resultType="example.dao.User">
+    select * from user1 where  name=${name}
   </select>
 </mapper>
 

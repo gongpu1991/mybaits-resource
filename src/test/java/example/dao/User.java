@@ -1,4 +1,4 @@
-package gongpu.dao;
+package example.dao;
 
 import java.io.Serializable;
 

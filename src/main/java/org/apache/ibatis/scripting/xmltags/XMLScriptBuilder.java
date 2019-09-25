@@ -67,7 +67,7 @@ public class XMLScriptBuilder extends BaseBuilder {
    *
    *  context内容是：
    *
-   *  <select resultType="gongpu.dao.User" parameterType="long" id="selectById">
+   *  <select resultType="example.dao.User" parameterType="long" id="selectById">
    *     select * from user where id = ${id}
    *   </select>
    *

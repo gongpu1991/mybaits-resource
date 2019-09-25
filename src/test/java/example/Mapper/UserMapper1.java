@@ -1,6 +1,7 @@
-package gongpu.Mapper;
+package example.Mapper;
 
-import gongpu.dao.User;
+
+import example.dao.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -10,5 +11,5 @@ public interface UserMapper1 {
 
   List<User> selectAll();
 
-  User selectByIdAndName(long id, String name);
+  User selectByIdAndName( String name);
 }

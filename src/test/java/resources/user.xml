@@ -2,18 +2,22 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="gongpu.Mapper.UserMapper">
+<mapper namespace="example.Mapper.UserMapper">
+  <!--开启二级缓存，测试的结果是不需要在mybatis-config.xml文件中配置其他信息了，单此一条配置即可-->
   <cache></cache>
-  <select id="selectById" parameterType="map" resultType="gongpu.dao.User">
+  <select id="selectById" parameterType="map" resultType="example.dao.User">
     select * from user where name = #{name} and id=#{id}
   </select>
 
-  <select id="selectAll" parameterType="map"  resultType="gongpu.dao.User">
+  <select id="selectAll" parameterType="map"  resultType="example.dao.User">
     select * from user where id = ${id} and name=#{name}
   </select>
 
-  <select id="selectByIdAndName" parameterType="map" resultType="gongpu.dao.User">
+  <select id="selectByIdAndName" parameterType="map" resultType="example.dao.User">
     select * from user where id = ${id} and name=${name}
+  </select>
+  <select id="selectByNameByPage" parameterType="map" resultType="example.dao.User">
+    select * from user where  name=#{name}
   </select>
 </mapper>
 

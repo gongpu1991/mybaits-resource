@@ -54,7 +54,7 @@ public class MapperProxyFactory<T> {
    *
    * @param sqlSession
    * @return
-   *   mapperProxy中的数据有：  mapperInterface：interface gongpu.Mapper.UserMapper
+   *   mapperProxy中的数据有：  mapperInterface：interface example.Mapper.UserMapper
    *                          sqlSession：xml解析出来的数据
    *                          methodCache：到这里没有方法，size=0
    */
